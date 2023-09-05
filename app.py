@@ -18,7 +18,12 @@ def calendar():
 
     conn.close()
 
-    return render_template('expense.html', expense_data=expense_data, total_expenses=total_expenses)
+    # Generate the URL for 'intake.png' in the 'static' folder
+    expense_image_url_1 = url_for('static', filename='expense1.png')
+    expense_image_url_2 = url_for('static', filename='expense2.png')
+
+
+    return render_template('expense.html', expense_data=expense_data, total_expenses=total_expenses, expense_image_url_1=expense_image_url_1, expense_image_url_2=expense_image_url_2)
 
 if __name__ == '__main__':
     app.run(debug=True)
