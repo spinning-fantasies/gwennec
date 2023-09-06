@@ -10,7 +10,7 @@ def calendar():
     conn = sqlite3.connect('data/gwennec.db')
     cursor = conn.cursor()
 
-    cursor.execute("SELECT date, payee, amount FROM expense")
+    cursor.execute("SELECT date, payee, amount FROM expense ORDER BY date asc")
     expense_data = cursor.fetchall()
 
     cursor.execute("SELECT SUM(amount) FROM expense;")
@@ -23,7 +23,11 @@ def calendar():
     expense_image_url_2 = url_for('static', filename='expense2.png')
 
 
-    return render_template('expense.html', expense_data=expense_data, total_expenses=total_expenses, expense_image_url_1=expense_image_url_1, expense_image_url_2=expense_image_url_2)
+    return render_template('expense.html', expense_data=expense_data, 
+                           total_expenses=total_expenses, 
+                           expense_image_url_1=expense_image_url_1, 
+                           expense_image_url_2=expense_image_url_2
+                           )
 
 if __name__ == '__main__':
     app.run(debug=True)
