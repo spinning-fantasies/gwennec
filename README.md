@@ -7,7 +7,7 @@ An expense tracking application
 Clone the repository :
 
 ```
-git@github.com:spinning-fantasies/gwennec.git
+git clone git@github.com:spinning-fantasies/gwennec.git
 ```
 
 Activate a virtualenv :
