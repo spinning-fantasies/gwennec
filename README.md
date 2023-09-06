@@ -1,4 +1,4 @@
-# fedi-cli
+# gwennec
 
 An expense tracking application
 
