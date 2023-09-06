@@ -32,13 +32,13 @@ Enter expenses :
 python cli.py
 ```
 
-Display expenses
+Display expenses :
 
 ```
 python app.py
 ```
 
-Display visualizations ;
+Display visualizations :
 
 ```
 python visualization1.py
